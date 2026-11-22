@@ -1,0 +1,408 @@
+{
+  "roles": [
+    {
+      "id": "R1",
+      "name": "阿芹",
+      "aliases": [
+        "阿芹",
+        "她大姐"
+      ]
+    },
+    {
+      "id": "R2",
+      "name": "余舟",
+      "aliases": [
+        "小余",
+        "他"
+      ]
+    },
+    {
+      "id": "R3",
+      "name": "花叔",
+      "aliases": [
+        "守楼人",
+        "花叔"
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "place": "候潮室",
+      "narration": "晚潮前众人等守楼人。"
+    },
+    {
+      "id": "S2",
+      "place": "长阶",
+      "narration": "余舟愿意留在长阶下。"
+    },
+    {
+      "id": "S3",
+      "place": "回声廊",
+      "narration": "阿芹没有出门，廊内能听回声。"
+    },
+    {
+      "id": "S4",
+      "place": "钥匙间",
+      "narration": "余舟需实际持有楼钥匙，随后才可以开门。"
+    },
+    {
+      "id": "S5",
+      "place": "二层转角",
+      "narration": "走楼外的另一条路，无需楼钥匙。"
+    },
+    {
+      "id": "S6",
+      "place": "楼顶",
+      "narration": "风已起，两种入楼方式在此会合。"
+    },
+    {
+      "id": "S7",
+      "place": "还钥匙处",
+      "narration": "可以改主意收回钥匙。"
+    }
+  ],
+  "edges": [
+    {
+      "id": "E1",
+      "origin": "S1",
+      "target": "S2",
+      "option": "陪余舟等",
+      "trigger": "余舟答应留下"
+    },
+    {
+      "id": "E2",
+      "origin": "S1",
+      "target": "S3",
+      "option": "去听长廊",
+      "trigger": "没有请余舟守候"
+    },
+    {
+      "id": "E3",
+      "origin": "S2",
+      "target": "S4",
+      "option": "走室内",
+      "trigger": "余舟手里有楼钥匙"
+    },
+    {
+      "id": "E4",
+      "origin": "S3",
+      "target": "S4",
+      "option": "直接开门",
+      "trigger": "余舟相信钥匙已交接"
+    },
+    {
+      "id": "E5",
+      "origin": "S3",
+      "target": "S5",
+      "option": "绕到窗外",
+      "trigger": "任何时候"
+    },
+    {
+      "id": "E6",
+      "origin": "S4",
+      "target": "S6",
+      "option": "上楼",
+      "trigger": "开门完成"
+    },
+    {
+      "id": "E7",
+      "origin": "S5",
+      "target": "S6",
+      "option": "从外面过去",
+      "trigger": "任何时候"
+    },
+    {
+      "id": "E8",
+      "origin": "S4",
+      "target": "S7",
+      "option": "先还钥匙",
+      "trigger": "暂时离开"
+    },
+    {
+      "id": "E9",
+      "origin": "S7",
+      "target": "S2",
+      "option": "回长阶",
+      "trigger": "重新与余舟商量"
+    },
+    {
+      "id": "E10",
+      "origin": "S2",
+      "target": "S5",
+      "option": "走楼外",
+      "trigger": "任何时候"
+    }
+  ],
+  "dialogue": [
+    {
+      "id": "L1",
+      "scene": "S1",
+      "line_no": 1,
+      "speaker": "R1",
+      "listeners": [
+        "R2"
+      ],
+      "variant": "",
+      "quote": "你若留下，我会替花叔保管钥匙。"
+    },
+    {
+      "id": "L2",
+      "scene": "S2",
+      "line_no": 1,
+      "speaker": "R2",
+      "listeners": [
+        "R1"
+      ],
+      "variant": "",
+      "quote": "我留下。你不在这儿的时候可以交给我。"
+    },
+    {
+      "id": "L3",
+      "scene": "S2",
+      "line_no": 2,
+      "speaker": "R1",
+      "listeners": [
+        "R2"
+      ],
+      "variant": "",
+      "quote": "那就托给你了。钥匙在你掌心，别落下。"
+    },
+    {
+      "id": "L4",
+      "scene": "S3",
+      "line_no": 1,
+      "speaker": "R3",
+      "listeners": [
+        "R2"
+      ],
+      "variant": "",
+      "quote": "你听的还是“若留下便替我保管”，我可没说她已经交了。"
+    },
+    {
+      "id": "L5",
+      "scene": "S3",
+      "line_no": 2,
+      "speaker": "R2",
+      "listeners": [
+        "R3"
+      ],
+      "variant": "",
+      "quote": "她说她给我了？不，我刚听岔。"
+    },
+    {
+      "id": "L6",
+      "scene": "S4",
+      "line_no": 1,
+      "speaker": "R2",
+      "listeners": [
+        "R1"
+      ],
+      "variant": "",
+      "quote": "我用你刚交给我的钥匙开。"
+    },
+    {
+      "id": "L7",
+      "scene": "S6",
+      "line_no": 1,
+      "speaker": "R1",
+      "listeners": [
+        "R2"
+      ],
+      "variant": "a",
+      "quote": "你把钥匙保管得真稳。"
+    },
+    {
+      "id": "L8",
+      "scene": "S6",
+      "line_no": 1,
+      "speaker": "R1",
+      "listeners": [
+        "R2"
+      ],
+      "variant": "b",
+      "quote": "上楼了，我们一起望潮吧。"
+    },
+    {
+      "id": "L9",
+      "scene": "S7",
+      "line_no": 1,
+      "speaker": "R1",
+      "listeners": [
+        "R2"
+      ],
+      "variant": "",
+      "quote": "刚才的话收回，钥匙我收回。"
+    },
+    {
+      "id": "L10",
+      "scene": "S2",
+      "line_no": 2,
+      "speaker": "R1",
+      "listeners": [
+        "R2"
+      ],
+      "variant": "b",
+      "quote": "这回先不给你了。"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "T1",
+      "line": "L6",
+      "language": "zh",
+      "ready": true
+    },
+    {
+      "id": "T2",
+      "line": "L7",
+      "language": "zh",
+      "ready": true
+    },
+    {
+      "id": "T3",
+      "line": "L8",
+      "language": "zh",
+      "ready": true
+    },
+    {
+      "id": "T4",
+      "line": "L6",
+      "language": "en",
+      "ready": true
+    },
+    {
+      "id": "T5",
+      "line": "L7",
+      "language": "en",
+      "ready": true
+    },
+    {
+      "id": "T6",
+      "line": "L8",
+      "language": "en",
+      "ready": false
+    },
+    {
+      "id": "T7",
+      "line": "L10",
+      "language": "zh",
+      "ready": false
+    },
+    {
+      "id": "track-L1-zh",
+      "line": "L1",
+      "language": "zh",
+      "ready": true
+    },
+    {
+      "id": "track-L1-en",
+      "line": "L1",
+      "language": "en",
+      "ready": true
+    },
+    {
+      "id": "track-L2-zh",
+      "line": "L2",
+      "language": "zh",
+      "ready": true
+    },
+    {
+      "id": "track-L2-en",
+      "line": "L2",
+      "language": "en",
+      "ready": true
+    },
+    {
+      "id": "track-L3-zh",
+      "line": "L3",
+      "language": "zh",
+      "ready": true
+    },
+    {
+      "id": "track-L3-en",
+      "line": "L3",
+      "language": "en",
+      "ready": true
+    },
+    {
+      "id": "track-L4-zh",
+      "line": "L4",
+      "language": "zh",
+      "ready": true
+    },
+    {
+      "id": "track-L4-en",
+      "line": "L4",
+      "language": "en",
+      "ready": true
+    },
+    {
+      "id": "track-L5-zh",
+      "line": "L5",
+      "language": "zh",
+      "ready": true
+    },
+    {
+      "id": "track-L5-en",
+      "line": "L5",
+      "language": "en",
+      "ready": true
+    },
+    {
+      "id": "track-L9-zh",
+      "line": "L9",
+      "language": "zh",
+      "ready": true
+    },
+    {
+      "id": "track-L9-en",
+      "line": "L9",
+      "language": "en",
+      "ready": true
+    }
+  ],
+  "releases": [
+    {
+      "id": "P1",
+      "entry": "S1",
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "rights": [
+        "zh"
+      ],
+      "options": [
+        "E1",
+        "E2",
+        "E3",
+        "E5",
+        "E6",
+        "E7",
+        "E8",
+        "E9",
+        "E10"
+      ]
+    },
+    {
+      "id": "P2",
+      "entry": "S1",
+      "languages": [
+        "en"
+      ],
+      "rights": [
+        "en"
+      ],
+      "options": [
+        "E1",
+        "E2",
+        "E4",
+        "E5",
+        "E6",
+        "E7",
+        "E10"
+      ]
+    }
+  ]
+}
